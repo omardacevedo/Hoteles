@@ -1,0 +1,113 @@
+//Colores
+$yellow:#383e2749;
+$verde:#3db593;
+
+@mixin margenes($top,$bottom){
+    margin-top: $top;
+    margin-bottom: $bottom;
+}
+
+body{
+    background-color:  $yellow ;
+    margin: 0;
+    padding: 0;
+
+}
+
+.jumbotron{
+   @include margenes(50px, 0px);
+    padding-top:40px ;
+}
+
+footer{
+    padding: 20px 15px;
+    margin: 0px;
+    background-color: $verde ;
+    height: 500px;
+}
+
+.card-hotel{
+    flex: 1 200px;
+    padding:2px 0px 2px 0px ;
+    @include margenes(10px, 0px);
+
+}
+.btn-reserva{
+    width: 100%;
+    border-radius: 0px;
+}
+
+.resorts{
+    text-align: center;
+    padding-bottom: 20px;
+    margin-bottom: 0;    
+}
+a:link{
+    text-decoration:none;
+}
+
+.display-4{
+    text-align: center;
+}
+.lead{
+    text-align: center;
+   @include margenes(12px, 0px);
+}
+.body{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding:20px;
+    grid-gap: 80px;
+    grid-template-columns: repeat(auto-fit, minmax(186px, 1fr));
+
+}
+.breadcrumb{
+    margin: 0;
+    //background-color:$yellow ;
+
+}
+
+.footer-addres-icon{
+    padding-right:10px ;
+}
+
+.centrar{
+    margin: 0 40px;
+}
+
+.Alojamiento{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: minmax(100px, auto);
+    column-gap: 40px;
+    margin:40px auto;
+
+}
+.card-one{
+    grid-column: 1/2;
+    border-radius: 10px ;
+}
+.card-two{
+    grid-column: 2/3;
+    border-radius: 10px ;
+}
+.card-three{
+    grid-column: 3/4;
+    border-radius: 10px ;
+}
+
+@media (max-width: 720px) {
+    .responsive {
+      display:flex;
+      flex-direction: column ;
+      gap: 20px;
+    }
+  }
+@media (min-width: 721px) {
+    .responsive {
+      display:flex;
+      flex-direction: row ;
+      justify-content: space-around;
+      
+    }
+  }
